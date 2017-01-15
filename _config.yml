@@ -1,5 +1,5 @@
 ---
-title: CONAVHDA
+title: Central Oregon North American Versatile Hunting Dog Association
 timezone: America/Los_Angeles
 collections:
   posts:
@@ -21,3 +21,7 @@ defaults:
   values:
     layout: page
 permalink: pretty
+sass_dir: _sass
+gems:
+- bourbon
+- neat
