@@ -13,10 +13,9 @@
           {% assign odd_center = site.pages.size | divided_by:2 %}
           {% assign center = odd_center | round %}
         {% endif %}
-
         {% assign i = 0 %}
         {% for page in site.pages %}
-          {% increment i %}
+          {% assign i = i | plus:1 %}
         	{% unless page.menu_level == 'subnav' or page.menu == false %}
             <li id="js-navigation{% if page.sub_menu %}-more{% endif %}" class="nav-link{% if page.sub_menu %} more {% endif %}">
           		<a href="{{page.url}}"{% if page.url == url %} class="active"{% endif %}>{{page.menu_name}}</a>
@@ -29,9 +28,9 @@
               	</ul>
               {% endif %}
           	</li>
-            {% if i == center %}
+            {% if i == center | minus: 2 %}
               <li class="nav-link logo">
-                <a href="/" class="logo">
+                <a href="/" class="logo"></a>
                   <img src="/uploads/conavhda_logo.jpg" alt="Logo Image">
                 </a>
               </li>
@@ -43,3 +42,6 @@
   </div>
 
 </header>
+{% for page in site.pages %}
+  <h2>{{page.name}}</h2>
+{% endfor %}
