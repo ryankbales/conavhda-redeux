@@ -1,0 +1,45 @@
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="/" class="mobile-logo">
+      <img src="/uploads/conavhda_logo.jpg" alt="Logo Image">
+    </a>
+    <a href="javascript:void(0)" class="centered-navigation-mobile-menu" id="js-centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        {% assign value = site.pages.size | modulo:2 %}
+        {% if value == 0 %}
+          {% assign center = site.pages.size | divided_by:2 %}
+        {% else %}
+          {% assign odd_center = site.pages.size | divided_by:2 %}
+          {% assign center = odd_center | round %}
+        {% endif %}
+
+        {% assign i = 0 %}
+        {% for page in site.pages %}
+          {% increment i %}
+        	{% unless page.menu_level == 'subnav' or page.menu == false %}
+            <li id="js-navigation{% if page.sub_menu %}-more{% endif %}" class="nav-link{% if page.sub_menu %} more {% endif %}">
+          		<a href="{{page.url}}"{% if page.url == url %} class="active"{% endif %}>{{page.menu_name}}</a>
+              {% if page.sub_menu %}
+            		<ul class="submenu">
+                  {% for sub in page.sub_menu %}
+                    {% assign menu_items = sub | split: "," %}
+                    <li class="nav-link"><a href="{{menu_items.last}}">{{menu_items.first}}</a></li>
+                  {% endfor %}
+              	</ul>
+              {% endif %}
+          	</li>
+            {% if i == center %}
+              <li class="nav-link logo">
+                <a href="/" class="logo">
+                  <img src="/uploads/conavhda_logo.jpg" alt="Logo Image">
+                </a>
+              </li>
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
+</header>
