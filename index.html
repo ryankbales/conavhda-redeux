@@ -9,3 +9,23 @@ layout: default
     <p>Serving Oregon's High Desert and Great Basin communities in training and testing of versatile hunting dogs.</p>
   </div>
 </div>
+
+<section class='row row-1'>
+  <div class="cards">
+    {% for callout in site.callouts %}
+      <div class="card">
+        <a href={{callout.callout_link}}>
+          <div class="card-image">
+            <img src={{callout.image.callout_image}} alt="">
+          </div>
+          <div class="card-header">
+            {{callout.title}}
+          </div>
+          <div class="card-copy">
+            <p>{{callout.callout_text}}</p>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</section>
