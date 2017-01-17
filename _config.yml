@@ -25,3 +25,4 @@ sass_dir: _sass
 gems:
 - bourbon
 - neat
+menu_array: []
