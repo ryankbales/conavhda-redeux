@@ -2,6 +2,9 @@
 title: Central Oregon North American Versatile Hunting Dog Association
 timezone: America/Los_Angeles
 collections:
+  callouts:
+    title: Callouts
+    output: true
   posts:
     title: Posts
     output: true
@@ -25,3 +28,4 @@ sass_dir: _sass
 gems:
 - bourbon
 - neat
+menu_array: []
