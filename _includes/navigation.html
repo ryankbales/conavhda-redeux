@@ -27,6 +27,10 @@
             	</ul>
             {% endif %}
         	</li>
+          {% assign foo = center | round %}
+          {% assign barr = i %}
+          <p>Center: {{foo}}</p>
+          <p>Counter: {{i}}</p>
           {% if i == center | round %}
             <li class="nav-link logo">
               <a href="/" class="logo">
