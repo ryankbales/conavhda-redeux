@@ -7,30 +7,29 @@
     <nav role="navigation">
       <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
         {% assign menu_item_array = site.menu_array %}
-        {% for page in site.pages %}
-          {% unless page.menu_level == 'subnav' or page.menu == false or page.url == "/" %}
+        {% for page in site.html_pages %}
+          {% unless page.menu_level == 'subnav' or page.url == "/" %}
             {% assign menu_item_array = menu_item_array | push: page %}
           {% endunless %}
         {% endfor %}
         {% assign center = menu_item_array.size | times: 0.5 %}
         {% assign i = 0 %}
-        {% for item in menu_item_array %}
+        {% for page in site.html_pages %}
           {% assign i = i | plus: 1 %}
-          <li id="js-navigation{% if item.sub_menu %}-more{% endif %}" class="nav-link{% if item.sub_menu %} more {% endif %}">
-        		<a href="{{item.url}}"{% if item.url == url %} class="active"{% endif %}>{{item.menu_name}}</a>
-            {% if item.sub_menu %}
-          		<ul class="submenu">
-                {% for sub in item.sub_menu %}
-                  {% assign menu_items = sub | split: "," %}
-                  <li class="nav-link"><a href="{{menu_items.last}}">{{menu_items.first}}</a></li>
-                {% endfor %}
-            	</ul>
-            {% endif %}
-        	</li>
-          {% assign foo = center | round %}
-          {% assign barr = i %}
-          <p>Center: {{foo}}</p>
-          <p>Counter: {{i}}</p>
+          {% unless page.url == "/" %}
+            <li id="js-navigation{% if page.sub_menu %}-more{% endif %}" class="nav-link{% if page.sub_menu %} more {% endif %}">
+          		<a href="{{page.url}}"{% if page.url == url %} class="active"{% endif %}>{{page.menu_name}}</a>
+              {% if page.sub_menu %}
+            		<ul class="submenu">
+                  {% for sub in page.sub_menu %}
+                    {% assign menu_items = sub | split: "," %}
+                    <li class="nav-link"><a href="{{menu_items.last}}">{{menu_items.first}}</a></li>
+                  {% endfor %}
+              	</ul>
+              {% endif %}
+          	</li>
+          {% endunless %}
+          
           {% if i == center | round %}
             <li class="nav-link logo">
               <a href="/" class="logo">
