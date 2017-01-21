@@ -31,4 +31,7 @@ layout: default
 </section>
 
 <section class='row row-2'>
+  {% for mission in site.mission-statement %}
+    {{mission.content}}
+  {% endfor %}
 </section>
