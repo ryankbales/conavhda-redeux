@@ -5,6 +5,9 @@ collections:
   callouts:
     title: Callouts
     output: true
+  mission-statement:
+    title: Mission Statement
+    output: true
   posts:
     title: Posts
     output: true
