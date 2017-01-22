@@ -21,7 +21,7 @@ tests:
     name: Utility Test
     member_price: "$185"
     non_member_price: "$210"
-    is_scheduled: true 
+    is_scheduled: true
 forms:
   membership_file: "/uploads/central-oregon-navhda-application.pdf"
   test_entry_file: "/uploads/navhda_test_entry.pdf"
