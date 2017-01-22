@@ -11,17 +11,17 @@ tests:
     name: Natural Ability
     member_price: "$145"
     non_member_price: "$170"
-    scheduled: true
+    is_scheduled: true
   utility_preparatory_test:
     name: Utility Preparatory Test
     member_price: "$165"
     non_member_price: "$190"
-    scheduled: true
+    is_scheduled: true
   utility_test:
     name: Utility Test
     member_price: "$185"
     non_member_price: "$210"
-    scheduled: true
+    is_scheduled: true
 forms:
   membership_file: "/uploads/central-oregon-navhda-application.pdf"
   test_entry_file: "/uploads/navhda_test_entry.pdf"
