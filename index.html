@@ -39,24 +39,11 @@ layout: default
 <section class='row row-3'>
   <h2 id="scroll-link-3">Sponsors</h2>
   <div class="grid-items-lines">
-    <a href="http://www.purina.com" target='blank' class="grid-item">
-      <img src="uploads/purina.jpg" alt="">
-    </a>
-    <a href="http://www.garmin.com" target='blank' class="grid-item">
-      <img src="uploads/garmin.jpg" alt="">
-    </a>
-    <a href="http://www.uglydoghunting.com/" target='blank' class="grid-item">
-      <img src="uploads/ugly-dog.jpg" alt="">
-    </a>
-    <a href="http://www.brownells.com/" target='blank' class="grid-item">
-      <img src="uploads/brownells.jpg" alt="">
-    </a>
-    <a href="http://www.ruffedgrousesociety.org/" target='blank' class="grid-item">
-      <img src="uploads/ruffed-grouse.jpg" alt="">
-    </a>
-    <a href="http://www.pheasantsforever.org/" target='blank' class="grid-item">
-      <img src="uploads/pheasants-and-quail-forever.jpg" alt="">
-    </a>
+    {% for sponsor in site.sponsors %}
+      <a href="{{sponsor.link}}" target='blank' class="grid-item">
+        <img src="{{sponsor.image.logo}}" alt="">
+      </a>
+    {% endfor %}
     <div class="right-cover"></div>
     <div class="bottom-cover"></div>
   </div>
