@@ -11,7 +11,10 @@ schedule:
     type: Utility Test
     member_price: "$185"
     non_member_price: "$210"
-    scheduled: 
+    scheduled: true
+  forms:
+    membership: 
+    test_entry: 
 ---
 
 ## Natural Ability Test
