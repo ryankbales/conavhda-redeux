@@ -41,7 +41,11 @@ layout: page
 
         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Forms</a>
         <div id="tab4" class="js-vertical-tab-content vertical-tab-content">
-          <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna, mollis vel suscipit in, pharetra at ligula. Pellentesque a est vel est fermentum pellentesque sed sit amet dolor. Nunc in dapibus nibh. Aliquam erat volutpat. Phasellus vel dui sed nibh iaculis convallis id sit amet urna. Proin nec tellus quis justo consequat accumsan. Vivamus turpis enim, auctor eget placerat eget, aliquam ut sapien.</p>
+          {% for forms in test.forms %}
+            {% for form in forms %}
+              <a href="{{form.file}}" target="blank">{{form.label}}</a><br>
+            {% endfor %}
+          {% endfor %}
         </div>
       </div>
     </div>
