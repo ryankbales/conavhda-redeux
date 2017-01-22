@@ -21,6 +21,32 @@ layout: page
         <div id="tab1" class="js-vertical-tab-content vertical-tab-content">
           {{test.start_date | date: "%A, %B %d, %Y"}}<br>
           {{test.end_date | date: "%A, %B %d, %Y"}}
+          <table class="table-minimal">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Start Time</th>
+                <th>Tests</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for day in days %}
+                {% for data in day %}
+                  <tr>
+                    <td>{{data.date | date: "%A %d, %Y"}}</td>
+                    <td>{{data.date | date: "%l:%M%P"}}</td>
+                    <td>
+                      <ul>
+                        {% for test in tests %}
+                          <li>{{test}}</li>
+                        {% endfor %}
+                      </ul>
+                    </td>
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+            </tbody>
+          </table>
         </div>
 
         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Location</a>
