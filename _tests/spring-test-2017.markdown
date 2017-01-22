@@ -8,8 +8,15 @@ location:
   latitude: 44.527673
   longitude: -121.11545
   directions: Coming Soon
-start_date: 2017-06-10 09:00:00 -07:00
-end_date: 2017-06-11 17:00:00 -07:00
+days:
+  day_1:
+    date: 2017-06-10 07:00:00 -07:00
+    tests:
+    - Natural Ability
+  day_2:
+    date: 2017-01-22 07:00:00 -08:00
+    tests:
+    - Natural Ability
 tests:
   natural_ability:
     name: Natural Ability
