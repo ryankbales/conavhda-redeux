@@ -23,9 +23,15 @@ tests:
     non_member_price: "$210"
     is_scheduled: true
 forms:
-  membership_file: "/uploads/central-oregon-navhda-application.pdf"
-  test_entry_file: "/uploads/navhda_test_entry.pdf"
-  test_policy_file: "/uploads/testing-policy.pdf"
+  membership:
+    file: "/uploads/central-oregon-navhda-application.pdf"
+    label: Central Oregon Membership Application
+  test_entry:
+    file: "/uploads/navhda_test_entry.pdf"
+    label: NAVHDA Test Entry Form
+  test_policy:
+    file: "/uploads/testing-policy.pdf"
+    label: NAVHDA Testing Policy
 ---
 
 ## 2017 Spring Test
