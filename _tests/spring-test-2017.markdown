@@ -13,8 +13,12 @@ schedule:
     non_member_price: "$210"
     scheduled: true
   forms:
-    membership: 
-    test_entry: 
+    membership:
+      image: "/uploads/central-oregon-navhda-application.pdf"
+    test_entry:
+      image: "/uploads/navhda_test_entry.pdf"
+    policy:
+      image: "/uploads/testing-policy.pdf"
 ---
 
 ## Natural Ability Test
