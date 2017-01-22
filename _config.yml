@@ -30,6 +30,7 @@ defaults:
   values:
     layout: page
 - scope:
+    path: ''
     type: sponsors
   values:
     image:
