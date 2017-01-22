@@ -19,7 +19,7 @@ layout: default
             <img src={{callout.image.callout_image}} alt="">
           </div>
           <div class="card-header">
-            {{callout.title}}
+            {{callout.callout_title}}
           </div>
           <div class="card-copy">
             <p>{{callout.callout_text}}</p>
@@ -31,4 +31,48 @@ layout: default
 </section>
 
 <section class='row row-2'>
+  {% for mission in site.mission-statement %}
+    {{mission.content}}
+  {% endfor %}
+</section>
+
+<section class='row row-3'>
+  <h2 id="scroll-link-3">Sponsors</h2>
+  <div class="grid-items-lines">
+    <a href="http://www.purina.com" target='blank' class="grid-item">
+      <img src="uploads/purina.jpg" alt="">
+    </a>
+    <a href="http://www.garmin.com" target='blank' class="grid-item">
+      <img src="uploads/garmin.jpg" alt="">
+    </a>
+    <a href="http://www.uglydoghunting.com/" target='blank' class="grid-item">
+      <img src="uploads/ugly-dog.jpg" alt="">
+    </a>
+    <a href="http://www.brownells.com/" target='blank' class="grid-item">
+      <img src="uploads/brownells.jpg" alt="">
+    </a>
+    <a href="http://www.ruffedgrousesociety.org/" target='blank' class="grid-item">
+      <img src="uploads/ruffed-grouse.jpg" alt="">
+    </a>
+    <a href="http://www.pheasantsforever.org/" target='blank' class="grid-item">
+      <img src="uploads/pheasants-and-quail-forever.jpg" alt="">
+    </a>
+    <div class="right-cover"></div>
+    <div class="bottom-cover"></div>
+  </div>
+</section>
+
+<section class='row row-4'>
+  <h2 id='contact'>Contact Central Oregon NAVHDA</h2>
+  <form action="http://formspree.io/conavhda@gmail.com" method="post">
+    <label for="name">Full Name: </label>
+    <input type="text" name="name" id="name" placeholder="Full Name" required>
+    <label for="_replyto">Email: </label>
+    <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+    <textarea rows="6" type="text" name="message" id="name" placeholder="Type Your Message Here" required></textarea>
+
+    <input type="hidden" name="_next" value="../thank_you.html" />
+    <input type="text" name="_gotcha" style="display:none" />
+    <input type="submit" value="Send">
+  </form>
 </section>
