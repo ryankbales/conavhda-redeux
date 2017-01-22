@@ -29,6 +29,12 @@ defaults:
     type: pages
   values:
     layout: page
+- scope:
+    type: sponsors
+  values:
+    image:
+      logo: "/uploads/purina.jpg"
+      link: http://www.purina.com
 permalink: pretty
 sass_dir: _sass
 gems:
