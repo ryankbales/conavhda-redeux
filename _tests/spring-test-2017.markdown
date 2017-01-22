@@ -21,4 +21,4 @@ schedule:
       image: "/uploads/testing-policy.pdf"
 ---
 
-## Natural Ability Test
+## 2017 Spring Test
