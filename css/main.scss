@@ -6,10 +6,16 @@ body {font-family: 'Raleway', sans-serif;}
 @charset "utf-8";
 
 @import "bourbon/bourbon";
+@import "base/base";
 @import "neat/neat";
 @import "refills/partials";
 
 .row {
   padding: 2%;
   text-align: center;
+}
+
+form {
+  text-align: left;
+  width: 50%;
 }
