@@ -14,7 +14,7 @@ days:
     tests:
     - Natural Ability
   day_2:
-    date: 2017-01-22 07:00:00 -08:00
+    date: 2017-06-11 07:00:00 -07:00
     tests:
     - Natural Ability
 tests:
