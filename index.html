@@ -10,6 +10,12 @@ layout: default
   </div>
 </div>
 
+<section class='row row-2'>
+  {% for mission in site.mission-statement %}
+    {{mission.content}}
+  {% endfor %}
+</section>
+
 <section class='row row-1'>
   <div class="cards">
     {% for callout in site.callouts %}
@@ -28,12 +34,6 @@ layout: default
       </div>
     {% endfor %}
   </div>
-</section>
-
-<section class='row row-2'>
-  {% for mission in site.mission-statement %}
-    {{mission.content}}
-  {% endfor %}
 </section>
 
 <section class='row row-3'>
