@@ -37,8 +37,8 @@ defaults:
     type: sponsors
   values:
     image:
-      logo: "/uploads/purina.jpg"
-      link: http://www.purina.com
+      logo:
+      link:
 permalink: pretty
 sass_dir: _sass
 gems:
