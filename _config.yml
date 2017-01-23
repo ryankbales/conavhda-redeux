@@ -37,8 +37,8 @@ defaults:
     type: sponsors
   values:
     image:
-      logo:
-      link:
+      logo: 
+      link: 
 permalink: pretty
 sass_dir: _sass
 gems:
