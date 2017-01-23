@@ -42,7 +42,7 @@ forms:
     label: NAVHDA Test Entry Form
   test_policy:
     file: "/uploads/testing-policy.pdf"
-    label: NAVHDA Testing Policy
+    label: NAVHDA Testing Entry Instructions & Policies
 ---
 
 ## 2017 Spring Test
