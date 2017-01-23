@@ -52,18 +52,49 @@ layout: page
 
         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab2">Location</a>
         <div id="tab2" class="js-vertical-tab-content vertical-tab-content">
-          {{test.location.city}}, {{test.location.state}}
+          <h3>{{test.location.city}}, {{test.location.state}}</h3>
+          <p>Location: {{test.location.address_or_landmark}}</p>
+          <p>Latitude and Longitude: {{test.location.latitude}}, {{test.location.longitude}}</p>
+          <div class="cards">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+              </div>
+              <div class="card-header">
+                Directions
+              </div>
+              <div class="card-copy">
+                <p>{{test.location.directions}}</p>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab3">Entry Fees</a>
         <div id="tab3" class="js-vertical-tab-content vertical-tab-content">
-          {% for info in test.tests %}
-            {% for data in info %}
-              {% if data.is_scheduled %}
-                {{data.name}}<br>
-              {% endif %}
+          <table class="table-minimal">
+            <thead>
+              <tr>
+                <th>Test</th>
+                <th>Member Price</th>
+                <th>Non-Member Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for data in test.tests %}
+                <tr>
+                  {% for info in data %}
+                    {% if info.is_scheduled %}
+                      <td>{{info.name}}</td>
+                      <td>{{info.member_price}}</td>
+                      <td>{{info.non_member_price}}</td>
+                    {% endif %}
+                  {% endfor %}
+                </tr>
             {% endfor %}
-          {% endfor %}
+            </tbody>
+          </table>
         </div>
 
         <a href="" class="js-vertical-tab-accordion-heading vertical-tab-accordion-heading" rel="tab4">Forms</a>
