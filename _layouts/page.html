@@ -4,7 +4,8 @@
   {% include head.html %}
 
 <body>
-  {% include header.html param="header_image" header_image=page.header_image %}
+  {% include header.html %}
+  {% include header_image.html header_image=page.header_image page_title=page.title %}
   {{content}}
 </body>
 
